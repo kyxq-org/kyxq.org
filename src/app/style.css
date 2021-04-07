@@ -1,36 +1,41 @@
 :root {
-    --orange: #FF6E40;
-    --yellow: #FFC13B;
-    --navy-blue: #1E3D59;
-    --baby-blue: #2DABDF;
-    --off-white: #F5F0E1;
-    --off-black: #132534;
+  --orange: #ff6e40;
+  --yellow: #ffc13b;
+  --navy-blue: #1e3d59;
+  --baby-blue: #2dabdf;
+  --off-white: #f5f0e1;
+  --off-black: #132534;
 }
 
-body, #base, html {
-    padding: 0px;
-    margin: 0px;
-    height: 100%;
-    overflow-x: hidden
+body,
+#base,
+html {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 body {
-    background-image: linear-gradient(var(--navy-blue), var(--baby-blue))
+  background-image: linear-gradient(var(--navy-blue), var(--baby-blue));
 }
 
 .LandingWave {
-    position: absolute;
-    bottom: 0px;
-    background-size: contain;
-    overflow: hidden;
-    width: 100%;
+  position: absolute;
+  bottom: 0px;
+  background-size: contain;
+  overflow: hidden;
+  width: 100%;
 }
 
-@font-face{
-    font-family: 'JetBrainsMono';
-    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
-      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff') format('woff'),
-      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}

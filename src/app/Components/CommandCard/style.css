@@ -1,0 +1,37 @@
+.CommandCard {
+    width: 90%;
+    margin-left: 5%;
+    background-image: linear-gradient(90deg, var(--off-black), #233544);
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-family: "JetBrainsMono";
+    color: white;
+    font-size: 14px;
+}
+
+.CommandName {
+    margin-left: 10px;
+}
+
+.CommandName {
+    margin-top: 10px;
+    color: var(--yellow);
+}
+
+.CommandDetails {
+    margin-top: 5px;
+    margin-left: 10px;
+    color: var(--orange)
+}
+
+.CommandDetailsTitle {
+    color: var(--yellow);
+}
+.CommandsBar {
+    color: var(--yellow);
+}
+
+.aliases {
+    color: var(--orange)
+}

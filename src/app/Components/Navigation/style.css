@@ -22,6 +22,7 @@
 .NavLink:hover {
     color: var(--orange);
     transition: color .4s;
+    
 }
 
 .LoginButton {
