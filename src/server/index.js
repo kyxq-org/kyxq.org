@@ -8,8 +8,7 @@ app.use(cors());
 app.use("/", express.static(join(__dirname, "/dist")));
 app.listen(config.port, () => {
   console.log("Server Online");
-  if (process.env.NODE_ENV === "development") {
-    console.log("Dev Server Started");
+  if (process.env.NODE_ENV === "development" || process.argv.includes("--dev")) {
     require("./webpack");
   }
 });

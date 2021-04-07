@@ -1,0 +1,46 @@
+.Logo {
+    width: 50px;
+    height: 50px;
+}
+
+.NavigationBar {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.NavLink {
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    position: relative;
+    bottom: 15px;
+    font-family: 'JetBrainsMono';
+    transition: color .4s;
+}
+
+.NavLink:hover {
+    color: var(--orange);
+    transition: color .4s;
+}
+
+.LoginButton {
+    float: right;
+    margin-right: 10px;
+    border: 2px var(--orange) solid;
+    background-color: transparent;
+    color: var(--orange);
+    width: 100px;
+    height: 50px;
+    font-size: 24px;
+    border-radius: 8px;
+    margin-top: 4px;
+    font-family: 'JetBrainsMono';
+    transition: background-color .4s;
+}
+
+.LoginButton:hover {
+    transition: all .4s;
+    background-color: var(--orange);
+    color: var(--navy-blue)
+}

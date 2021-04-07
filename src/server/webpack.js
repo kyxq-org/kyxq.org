@@ -1,6 +1,6 @@
 const webpack = require("webpack");
 const config = require("../../webpack/webpack.config");
-const fs = resolve("fs");
+const fs = require("fs");
 const { resolve } = require("path");
 let lastHash;
 
