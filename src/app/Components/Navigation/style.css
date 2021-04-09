@@ -25,6 +25,12 @@
     
 }
 
+@media screen and(max-width: 768px) {
+    .NavLink {
+        display: none;
+    }
+}
+
 .LoginButton {
     float: right;
     margin-right: 10px;

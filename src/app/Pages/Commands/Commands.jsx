@@ -6,12 +6,16 @@ export default class Commands extends React.Component {
   constructor() {
     super();
     this.state = {
-      selected: "information",
+      selected: "all",
     };
   }
   render() {
-    console.log(Object.entries(CommandsJson));
-    console.log(this.state);
+    var groups = [];
+    for (var i of Object.entries(CommandsJson)) {
+      if (!groups.includes(i[1].help.category)) {
+        groups.push(i[1].help.category.toLowerCase());
+      }
+    }
     return (
       <div style={{ marginTop: "50px" }}>
         <div className="categorySelector">
@@ -19,9 +23,24 @@ export default class Commands extends React.Component {
             className="CommandCategoryBtn pink-grad"
             onClick={() => this.setState({ selected: "all" })}
           >
-            All
+            All ({Object.entries(CommandsJson).length})
           </button>
-          <button
+
+          {groups.map((f) => (
+            <button
+              className="CommandCategoryBtn"
+              onClick={() => this.setState({ selected: f })}
+            >
+              {f.split("")[0].toUpperCase() + f.split("").slice(1).join("")} (
+              {
+                Object.entries(CommandsJson).filter(
+                  (s) => s[1].help.category === f
+                ).length
+              }
+              )
+            </button>
+          ))}
+          {/* <button
             className="CommandCategoryBtn green-blue-grad"
             onClick={() => this.setState({ selected: "currency" })}
           >
@@ -56,7 +75,7 @@ export default class Commands extends React.Component {
             onClick={() => this.setState({ selected: "developer" })}
           >
             Developer
-          </button>
+          </button> */}
         </div>
         <div className="Commands">
           {Object.entries(CommandsJson)
@@ -66,7 +85,7 @@ export default class Commands extends React.Component {
                 : f[1].help.category === this.state.selected
             )
             .map((f) => (
-              <CommandCard cmd={f[1]} />
+              <CommandCard cmd={f[1]} currentlySelected={this.state.selected} />
             ))}
         </div>
       </div>

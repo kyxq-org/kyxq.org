@@ -8,19 +8,28 @@
     font-family: "JetBrainsMono";
     color: white;
     font-size: 14px;
+    height: 95px;
+    overflow: hidden;
+    transition: height .2s;
+}
+
+.CommandCard:hover {
+    transition: height .2s;
+    height: 125px;
+}
+.CommandCardBig:hover {
+    transition: height .2s;
+    height: 155px!important;
 }
 
 .CommandName {
     margin-left: 10px;
-}
-
-.CommandName {
     margin-top: 10px;
     color: var(--yellow);
 }
 
 .CommandDetails {
-    margin-top: 5px;
+    margin-top: 0px;
     margin-left: 10px;
     color: var(--orange)
 }
@@ -34,4 +43,8 @@
 
 .aliases {
     color: var(--orange)
+}
+
+.arguments {
+    color: var(--baby-blue);
 }
