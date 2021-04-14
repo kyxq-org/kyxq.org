@@ -6,3 +6,33 @@
     margin-left: 5%;
     margin-top: 50px;
 }
+
+.SettingsHeader {
+    width: 100%;
+    font-size: 32px;
+    color: var(--orange);
+    text-align: center;
+    font-family: "JetBrainsMono";
+}
+
+.SettingsSection {
+    margin-left: 25px;
+}
+
+.SettingsCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.SettingsHeaderMini {
+    width: 100%;
+    font-size: 26px;
+    color: var(--orange);
+    text-align: center;
+    font-family: "JetBrainsMono";
+}
+
+.GuildSettings {
+    padding-bottom: 100px;
+}
