@@ -1,66 +1,63 @@
 .GuildCard {
 	background-color: rgba(0, 0, 0, 0.8);
-    width: 250px;
-    margin: 10px;
-    border-radius: 8px;
-    min-width: 250px;
-    padding-bottom: 15px;
+	width: 250px;
+	margin: 10px;
+	border-radius: 8px;
+	min-width: 250px;
+	padding-bottom: 15px;
+    height: fit-content;
 }
 
 .GuildIcon {
-    width: 220px;
-    margin-left: 15px;
-    margin-top: 15px;
-    border-radius: 8px;
+	width: 220px;
+	margin-left: 15px;
+	margin-top: 15px;
+	border-radius: 8px;
 }
 
 .GuildName {
-    color: white;
-    font-family: "JetBrainsMono";
-    margin-left: 15px;
-    font-size: 22px;
-    /* margin-top: 10px; */
-    width: 220px;
-    text-align: center;
-    line-height: 50%;
+	color: white;
+	font-family: 'JetBrainsMono';
+	margin-left: 15px;
+	font-size: 22px;
+	/* margin-top: 10px; */
+	width: 220px;
+	text-align: center;
 }
 
 .AddToServerGuildCard {
-    margin-left: 15px;
-    width: 220px;
-    height: 50px;
-    background-color: transparent;
-    color: var(--orange);
-    border: 2px solid var(--orange);
-    border-radius: 8px;
-    transition: all .4s;
-    font-family: "JetBrainsMono";
-    font-size: 18px;
-
+	margin-left: 15px;
+	width: 220px;
+	height: 50px;
+	background-color: transparent;
+	color: var(--orange);
+	border: 2px solid var(--orange);
+	border-radius: 8px;
+	transition: all 0.4s;
+	font-family: 'JetBrainsMono';
+	font-size: 18px;
 }
 
-
 .AddToServerGuildCard:hover {
-    color: white;
-    background-color: var(--orange);
-    transition: all .4s;
+	color: white;
+	background-color: var(--orange);
+	transition: all 0.4s;
 }
 
 .DashboardGuildCard {
-    margin-left: 15px;
-    width: 220px;
-    height: 50px;
-    background-color: transparent;
-    color: var(--yellow);
-    border: 2px solid var(--yellow);
-    border-radius: 8px;
-    transition: all .4s;
-    font-family: "JetBrainsMono";
-    font-size: 18px;
-
+	margin-left: 15px;
+	width: 220px;
+	height: 50px;
+	background-color: transparent;
+	color: var(--yellow);
+	border: 2px solid var(--yellow);
+	border-radius: 8px;
+	transition: all 0.4s;
+	font-family: 'JetBrainsMono';
+	font-size: 18px;
 }
 .DashboardGuildCard:hover {
-    color: white;
-    background-color: var(--yellow);
-    transition: all .4s;
+	color: white;
+	background-color: var(--yellow);
+	transition: all 0.4s;
 }

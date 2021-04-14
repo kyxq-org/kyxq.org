@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './style.css';
 import { apiBase } from '../../../../config.json';
 import fetch from 'node-fetch';
+import DiscordLogo from '../../Assets/Images/discord.png';
 export default class guildcard extends Component {
 	constructor(props) {
 		super();
@@ -24,10 +25,14 @@ export default class guildcard extends Component {
 		const { guild } = this.props;
 		return (
 			<div className="GuildCard">
-				<img
-					className="GuildIcon"
-					src={`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png?size=1024`}
-				/>
+				{!guild.icon ? (
+					<img className="GuildIcon" src={DiscordLogo} />
+				) : (
+					<img
+						className="GuildIcon"
+						src={`https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png?size=1024`}
+					/>
+				)}
 				<p className="GuildName">{guild.name}</p>
 				{this.state.inGuild ? (
 					<a href={`/dashboard?id=${guild.id}`}>

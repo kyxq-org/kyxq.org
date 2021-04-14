@@ -1,0 +1,31 @@
+.DashboardSwitchCard {
+	width: 95%;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 8px;
+	color: white;
+	padding: 10px;
+    margin-top: 10px;
+}
+
+.SwitchCardLeft {
+	width: 90%;
+	float: left;
+}
+
+.SwitchCardName {
+	color: var(--orange);
+    font-size: 24px;
+    margin: 0px;
+    margin-top: 2px;
+}
+
+.SwitchCardDescription {
+	color: var(--yellow);
+    margin: 0px;
+    margin-top: 9px;
+}
+
+.SwitchCardRight {
+    float: right;
+    width: 10%;
+}

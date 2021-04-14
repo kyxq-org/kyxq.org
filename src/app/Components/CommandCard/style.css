@@ -1,50 +1,50 @@
 .CommandCard {
-    width: 90%;
-    margin-left: 5%;
-    background-image: linear-gradient(90deg, var(--off-black), #233544);
-    padding: 5px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    font-family: "JetBrainsMono";
-    color: white;
-    font-size: 14px;
-    height: 95px;
-    overflow: hidden;
-    transition: height .2s;
+	width: 90%;
+	margin-left: 5%;
+	background-image: linear-gradient(90deg, var(--off-black), #233544);
+	padding: 5px;
+	margin-bottom: 10px;
+	border-radius: 8px;
+	font-family: 'JetBrainsMono';
+	color: white;
+	font-size: 14px;
+	height: 95px;
+	overflow: hidden;
+	transition: height 0.2s;
 }
 
 .CommandCard:hover {
-    transition: height .2s;
-    height: 125px;
+	transition: height 0.2s;
+	height: 125px;
 }
 .CommandCardBig:hover {
-    transition: height .2s;
-    height: 155px!important;
+	transition: height 0.2s;
+	height: 155px !important;
 }
 
 .CommandName {
-    margin-left: 10px;
-    margin-top: 10px;
-    color: var(--yellow);
+	margin-left: 10px;
+	margin-top: 10px;
+	color: var(--yellow);
 }
 
 .CommandDetails {
-    margin-top: 0px;
-    margin-left: 10px;
-    color: var(--orange)
+	margin-top: 0px;
+	margin-left: 10px;
+	color: var(--orange);
 }
 
 .CommandDetailsTitle {
-    color: var(--yellow);
+	color: var(--yellow);
 }
 .CommandsBar {
-    color: var(--yellow);
+	color: var(--yellow);
 }
 
 .aliases {
-    color: var(--orange)
+	color: var(--orange);
 }
 
 .arguments {
-    color: var(--baby-blue);
+	color: var(--baby-blue);
 }
