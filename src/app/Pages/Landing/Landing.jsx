@@ -27,7 +27,6 @@ export default class Landing extends React.Component {
             </button>
           </a>
         </div>
-
         <Wave className="LandingWave" />
       </div>
     );
