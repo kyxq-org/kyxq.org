@@ -1,38 +1,41 @@
 .GuildSelection {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	width: 97%;
+	margin-left: 1%;
+	margin-top: 50px;
+	background-color: rgba(0, 0, 0, 0.3);
+	padding: 10px;
+    border-radius: 8px;
 }
 
 .SettingsHeader {
-    width: 100%;
-    font-size: 32px;
-    color: var(--orange);
-    text-align: center;
-    font-family: "JetBrainsMono";
+	width: 100%;
+	font-size: 32px;
+	color: var(--orange);
+	text-align: center;
+	font-family: 'JetBrainsMono';
 }
 
 .SettingsSection {
-    margin-left: 25px;
+	margin-left: 25px;
 }
 
 .SettingsCards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .SettingsHeaderMini {
-    width: 100%;
-    font-size: 26px;
-    color: var(--orange);
-    text-align: center;
-    font-family: "JetBrainsMono";
+	width: 100%;
+	font-size: 26px;
+	color: var(--orange);
+	text-align: center;
+	font-family: 'JetBrainsMono';
 }
 
 .GuildSettings {
-    padding-bottom: 100px;
+	padding-bottom: 100px;
 }

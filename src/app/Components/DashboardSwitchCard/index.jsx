@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
-
+import Switch from '../Switch/index.jsx';
 export default class SwitchCard extends Component {
 	constructor(props) {
 		super(props);
@@ -8,7 +8,7 @@ export default class SwitchCard extends Component {
 	}
 
 	render() {
-		const { name, enabled, description } = this.props;
+		var { name, enabled, description } = this.props;
 		return (
 			<div className="DashboardSwitchCard">
 				<div className="SwitchCardLeft">
@@ -16,9 +16,17 @@ export default class SwitchCard extends Component {
 					<p className="SwitchCardDescription">{description}</p>
 				</div>
 				<div className="SwitchCardRight">
-					{/* <h1>Switch goes here</h1> */}
+					<Switch
+						enabled={enabled}
+						onUpdate={(e) => this.updateValue(e)}
+					/>
 				</div>
 			</div>
 		);
+	}
+
+	updateValue(bool) {
+		const { onUpdate } = this.props;
+		onUpdate(bool);
 	}
 }

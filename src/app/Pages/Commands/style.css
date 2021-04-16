@@ -1,8 +1,8 @@
 .categorySelector {
-  margin-left: 5%;
-  margin-top: 25px;
+  margin-left: 1%;
+  margin-top: 1%;
   margin-bottom: 10px;
-  width: 90%;
+  width: 97%;
   padding: 10px;
   border-radius: 8px;
   background-image: linear-gradient(90deg, var(--off-black), #233544);
@@ -25,4 +25,13 @@
   font-family: "JetBrainsMono";
   width: fit-content;
   min-width: 145px;
+}
+
+.MainDivCommands {
+  margin-top: 30px;
+  background-color: rgba(0,0,0,.3);
+  width: 90%;
+  margin-left: 5%;
+  padding: 1px;
+  border-radius: 8px;
 }

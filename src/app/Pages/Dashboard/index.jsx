@@ -4,11 +4,9 @@ import { apiBase } from '../../../../config.json';
 import GuildCard from '../../Components/GuildCard/index.jsx';
 import './style.css';
 import './guildSettings.css';
-
+import GuildSettings from './guildSettings.jsx';
 // cards
-import SettingsCard from '../../Components/DashboardSettingsCard/index.jsx';
-import MessageCard from '../../Components/DashboardMessageCard/index.jsx';
-import SwitchCard from '../../Components/DashboardSwitchCard/index.jsx';
+
 export default withRouter(
 	class dashboard extends Component {
 		constructor(props) {
@@ -58,16 +56,22 @@ export default withRouter(
 				return (
 					<div>
 						<div className="GuildSelection">
-							{[...this.state.user.guilds]
-								.filter(
-									(f) =>
-										f.owner ||
-										(f.permissions & 0x000000020) ==
-											0x000000020
-								)
-								.map((f) => (
-									<GuildCard guild={f} />
-								))}
+							{this.state.user.guilds.length >= 1 ? (
+								[...this.state.user.guilds]
+									.filter(
+										(f) =>
+											f.owner ||
+											(f.permissions & 0x000000020) ==
+												0x000000020
+									)
+									.map((f) => (
+										<GuildCard key={f.id} guild={f} />
+									))
+							) : (
+								<p style={{ textAlign: 'center' }}>
+									You arn't in any guilds
+								</p>
+							)}
 						</div>
 					</div>
 				);
@@ -110,150 +114,15 @@ export default withRouter(
 						</div>
 
 						<div className="GuildSettingsPane">
-							{this.projector()}
+							<GuildSettings
+								tab={this.state.tab}
+								guildSettings={this.state.guildSettings}
+								guildID={this.state.guildID}
+							/>
 						</div>
 					</div>
-					// <div className="GuildSettings">
-					// 	<p className="SettingsHeader">
-					// 		{guild.name}'s Settings
-					// 	</p>
-					// 	<div className="SettingsSection">
-					// 		<p className="SettingsHeaderMini">
-					// 			General Settings
-					// 		</p>
-					// 		<div className="SettingsCards">
-					// 			<SettingsCard
-					// 				header="prefix"
-					// 				currentState={
-					// 					this.state.guildSettings.prefix
-					// 				}
-					// 				desc="The bots prefix"
-					// 				id="prefix"
-					// 			/>
-					// 		</div>
-
-					// 		<p className="SettingsHeaderMini">
-					// 			Join/Leave Messages
-					// 		</p>
-					// 		<div className="SettingsCards">
-					// 			<MessageCard
-					// 				header="join"
-					// 				currentState={
-					// 					this.state.guildSettings.messages
-					// 						.welcome
-					// 				}
-					// 				desc="The message sent when a user joins the guild"
-					// 				id="welcomemsg"
-					// 			/>
-					// 			<MessageCard
-					// 				header="leave"
-					// 				currentState={
-					// 					this.state.guildSettings.messages.leave
-					// 				}
-					// 				desc="The message sent when a user leaves the guild"
-					// 				id="leavemsg"
-					// 			/>
-					// 		</div>
-					// 	</div>
-					// </div>
 				);
 			}
-		}
-
-		projector() {
-			switch (this.state.tab) {
-				case 'home':
-					return this.renderHome();
-				case 'automod':
-					return this.renderAutomod();
-				case 'messages':
-					return this.renderJoinLeave();
-
-				default:
-					return <h1>This isnt a valid menu item</h1>;
-			}
-		}
-
-		renderHome() {
-			return (
-				<div className="Flexbox-Dash">
-					<SettingsCard
-						header="prefix"
-						currentState={this.state.guildSettings.prefix}
-						desc="The bots prefix"
-						id="prefix"
-					/>
-				</div>
-			);
-		}
-
-		renderJoinLeave() {
-			return <h1>Join leave components</h1>;
-		}
-
-		renderAutomod() {
-			return (
-				<div className="Flexbox-Dash">
-					<SwitchCard
-						name="All Caps"
-						description="The bot will delete all messages with over 75% capital letters."
-						enabled={
-							this.state.guildSettings.switches.automod.allCaps
-						}
-					/>
-					<SwitchCard
-						name="All Links"
-						description="The bot will delete all links sent in a channel."
-						enabled={
-							this.state.guildSettings.switches.automod.allLinks
-						}
-					/>
-					<SwitchCard
-						name="Duplicate Text"
-						description="The bot will delete duplicated text."
-						enabled={
-							this.state.guildSettings.switches.automod
-								.duplicateText
-						}
-					/>
-					<SwitchCard
-						name="Fast Messages"
-						description="The bot will delete messages being spammed (by the same user)."
-						enabled={
-							this.state.guildSettings.switches.automod.fastmsg
-						}
-					/>
-					<SwitchCard
-						name="Image Spam"
-						description="The bot will delete images that are being sent multiple times."
-						enabled={
-							this.state.guildSettings.switches.automod.imageSpam
-						}
-					/>
-					<SwitchCard
-						name="All Invites"
-						description="The bot will delete invites sent to a channel."
-						enabled={
-							this.state.guildSettings.switches.automod.invites
-						}
-					/>
-					<SwitchCard
-						name="Mass Mentions"
-						description="The bot will delete messages with over 10 mentions."
-						enabled={
-							this.state.guildSettings.switches.automod
-								.massMentions
-						}
-					/>
-					<SwitchCard
-						name="Spoilers"
-						description="The bot will delete all messages that are over 75% spoilers."
-						enabled={
-							this.state.guildSettings.switches.automod.spoilers
-						}
-					/>
-				</div>
-			);
 		}
 	}
 );

@@ -17,7 +17,7 @@ export default class Commands extends React.Component {
       }
     }
     return (
-      <div style={{ marginTop: "50px" }}>
+      <div className="MainDivCommands">
         <div className="categorySelector">
           <button
             className="CommandCategoryBtn pink-grad"

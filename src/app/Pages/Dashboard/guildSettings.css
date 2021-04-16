@@ -1,7 +1,7 @@
 .Sidebar {
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.3);
 	margin-top: 10px;
-	margin-left: 10px;
+	margin-left: 1%;
 	width: 15%;
 	border-radius: 8px;
 	color: white;
@@ -24,14 +24,51 @@
 }
 
 .GuildSettingsPane {
-	width: 78%;
 	float: left;
-    margin-left: 10px;
-    margin-top: 2px;
+	margin-left: 1%;
+	margin-top: 1%;
+	padding: 1%;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 8px;
+	width: 70%;
+	min-width: 320px;
+}
+
+@media screen and(max-width: 768px) {
+	.GuildSettingsPane {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.MainBox {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.Flexbox-Dash {
+		justify-content: center!important;
+	}
+	.SettingsPaneHeader {
+		text-align: center;
+	}
+	.Sidebar {
+		width: 70%;
+		padding: 1%;
+	}
 }
 
 .Flexbox-Dash {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
+}
+
+.SettingsPaneHeader {
+	color: var(--orange);
+	font-size: 28px;
+	margin-top: 0px;
+}
+
+.MainBox {
+	margin-top: 40px;
 }

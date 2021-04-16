@@ -13,7 +13,7 @@ export default class DashboardSettingsCard extends Component {
 
 	render() {
 		const { header, currentState, desc, id } = this.state;
-        var inputID = `input-box-${id}`
+		var inputID = `input-box-${id}`;
 		return (
 			<div className="DashboardSettingsCard">
 				<p className="SettingsCardHeader">{header}</p>
@@ -23,8 +23,25 @@ export default class DashboardSettingsCard extends Component {
 					placeholder={currentState}
 					id={inputID}
 				/>
-				<button className="SettingsCardButton">Update</button>
+				<button
+					onClick={() => this.updateValue()}
+					className="SettingsCardButton"
+					id={`input-button-${id}`}
+				>
+					Update
+				</button>
 			</div>
 		);
+	}
+
+	updateValue(id) {
+		var value = document.getElementById(`input-box-${id}`).value;
+		if (value.length < 1) return;
+		const { onUpdate } = this.props;
+		document.getElementById(`input-button-${id}`).innerHTML = "Updated!"
+		setTimeout(() => {
+			document.getElementById(`input-button-${id}`).innerHTML = "Update"
+		}, 3000)
+		onUpdate(value);
 	}
 }
