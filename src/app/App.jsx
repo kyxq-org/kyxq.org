@@ -41,6 +41,7 @@ export default class App extends Component {
 
 	render() {
 		var { user } = this.state;
+		window.sessionStorage.setItem("session", "test")
 		return (
 			<Switch>
 				<React.Suspense fallback={<p>pls wait</p>}>
